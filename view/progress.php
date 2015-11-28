@@ -29,6 +29,7 @@
 	$(".progressbar").click(function () {
 		progress++;
 		increase();
+		console.log("beep boop");
 	});
 	
 	function increase(){
