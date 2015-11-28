@@ -26,14 +26,14 @@
 <script>
 	var progress = 0;
 	
-	$(".progressbar").click(function () {
+	$(".barSection").click(function () {
 		progress++;
 		increase();
 		console.log("beep boop");
 	});
 	
 	function increase(){
-		$(".progressbar .barSection:nth-child(" + (progress) + ")").css("background-color", "#38b12f");
+		$(".progressbar .barSection:nth-child(" + progress + ")").css("background-color", "#38b12f");
 	}
 </script>
 <style>
