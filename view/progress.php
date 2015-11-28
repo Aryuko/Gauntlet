@@ -41,7 +41,7 @@
 		Green: #38b12f
 	
 	*/
-	#progressbar{
+	.progressbar{
 		margin: auto;
 		position: relative;
 		top: 25%;
