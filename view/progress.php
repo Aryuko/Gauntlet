@@ -4,7 +4,7 @@
 		<title>Progress</title>
 	</head>
 	<body>
-		<div id="progressbar">
+		<div class="progressbar">
 			<div class="barSection">
 				
 			</div>
@@ -59,6 +59,6 @@
 		flex: 1;
 		border-right: 1px solid #c6c6c6;
 		
-		transition: 2s background-color;
+		transition: background-color 1s;
 	}
 </style>
