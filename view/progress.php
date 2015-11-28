@@ -21,18 +21,19 @@
 				
 			</div>
 		</div>
+		<button>Press me! :D</button>
 	</body>
 </html>
 <script>
 	var progress = 0;
 	
-	$(".barSection").click(function () {
+	$("button").click(function () {
 		progress++;
-		increase();
-		console.log("beep boop");
+		colorBar();
+		console.log("beep boop: " + progress);
 	});
 	
-	function increase(){
+	function colorBar(){
 		$(".progressbar .barSection:nth-child(" + progress + ")").css("background-color", "#38b12f");
 	}
 </script>
@@ -44,20 +45,21 @@
 	.progressbar{
 		margin: auto;
 		position: relative;
-		top: 25%;
-		background-color: #909090;
-		width: 500px;
+		top: 0;
+		width: 80%;
 		display: flex;
-		border-radius: 20px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
 		overflow: hidden;
-		border: 4px solid #c6c6c6;
+		border: 3px solid #5d5d5d;
+		border-top: 0;
 	}
 	.barSection{
-		height: 100px;
-		background-color: #5d5d5d;
+		height: 20px;
+		background-color: #c6c6c6;
 		min-width: 1%;
 		flex: 1;
-		border-right: 1px solid #c6c6c6;
+		border-right: 1px solid #5d5d5d;
 		
 		transition: background-color 1s;
 	}
