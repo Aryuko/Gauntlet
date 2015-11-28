@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<title>Progress</title>
-		<link href="generalStyle.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<div class="progressbar">
@@ -28,11 +27,13 @@
 <style>
 	.progressbar{
 		background-color: #909090;
-		height: 200px;
 		width: 500px;
 		display: flex;
 	}
 	.barSection{
 		height: 200px;
+		background-color: #2a8e22;
+		min-width: 20%;
+		flex: 1;
 	}
 </style>
