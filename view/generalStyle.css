@@ -2,7 +2,11 @@
 	margin: 0;
 	padding 0;
 }
+html{
+	height: 100%;
+}
 body{
-	background-color: #8ca2a3;
+	background-color: #dceae9;
 	color: white;
+	height: 100%;
 }
