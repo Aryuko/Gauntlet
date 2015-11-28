@@ -35,5 +35,7 @@
 		background-color: #2a8e22;
 		min-width: 20%;
 		flex: 1;
+		border-left: 2px solid #777777;
+		border-right: 2px solid #4a4a4a;
 	}
 </style>
