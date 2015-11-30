@@ -6,6 +6,5 @@
 	</head>
     <body>
         <?php include "view/progress.php"; ?>
-    <button>Press me! :D</button>
     </body>
 </html>
