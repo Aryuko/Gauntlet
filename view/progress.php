@@ -40,7 +40,7 @@
 		colorBar();
 		console.log("beep boop: " + progress);
 	});
-	
+
 	function colorBar(){
 		$(".progressbar .barSection:nth-child(" + progress + ")").css("background-color", "#38b12f");
 	}
