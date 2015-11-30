@@ -2,9 +2,9 @@
 
     include_once "dbConnect.php";
 
+    /*
 	$stmt = $dbh->prepare("SELECT `progress` FROM `gProgress` WHERE `id` = 0");
 
-    /*
 	if(!$stmt->execute()){
        die('Could not execute statement');
     }
@@ -14,6 +14,7 @@
     }
     */
 
+    $stmt = "SELECT `progress` FROM `gProgress` WHERE `id` = 0";
     if(!$res = $dbh->query($stmt)){
         die('Could not get result');
     }
