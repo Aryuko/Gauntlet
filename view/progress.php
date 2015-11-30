@@ -23,7 +23,7 @@
 
     function getProgress () {
         $.ajax({
-            method: "POST",
+            method: "GET",
             url: "../controller/database/getProgress.php"
         })
         .done(function( msg ) {
