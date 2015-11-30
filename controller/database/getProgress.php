@@ -8,11 +8,11 @@
        die('Could not execute statement');
     }
 
-	if($res = $stmt->get_result()){
+	if(!$res = $stmt->get_result()){
        die('Could not get result');
     }
 
-	if($row = $res->fetch_array()){
+	if(!$row = $res->fetch_array()){
        die('Could not fetch array');
     }
 
