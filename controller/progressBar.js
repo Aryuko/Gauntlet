@@ -4,7 +4,8 @@ $("document").ready(function () {
 	getProgress(function (msg) {
 		progress = msg;
 	});
-	colorBar();
+	initColorBar();
+	alert('document.ready');
 });
 
 function getProgress (callback) {
@@ -37,16 +38,23 @@ function decProgress (callback) {
 	});
 }
 */
-function colorBar() {
-	$(".progressbar .barSection:nth-child(" + progress + ")").css("background-color", "#38b12f");
+function initColorBar(){
+	for(var i = 1; i <= progress; i++){
+		colorBar(i);
+	}
+}
+
+function colorBar(index) {
+	$(".progressbar .barSection:nth-child(" + index + ")").css("background-color", "#38b12f");
 }
 
 $("#incProgress").click(function () {
+	alert('Progress increased');
 	incProgress(function () {
 		alert("Updated progress: " + progress);
 	});
 });
 
 $("#checkProgress").click(function () {
-	alert(progress);
+	alert('Progress: ' + progress);
 });

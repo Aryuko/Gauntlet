@@ -15,7 +15,7 @@
 
     </div>
 </div>
-<button id="incProgress">Press me! :D</button>
+<button id="incProgress">Increase progress</button>
 <button id="checkProgress">Check progress</button>
 
 <style>
