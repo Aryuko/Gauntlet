@@ -11,7 +11,7 @@ $("document").ready(function () {
 function getProgress (callback) {
 	$.ajax({
 		method: "GET",
-		url: "../controller/database/getProgress.php"
+		url: "database/getProgress.php"
 	})
 	.done(function( msg ) {
 		callback(msg);
@@ -21,7 +21,7 @@ function getProgress (callback) {
 function incProgress (callback) {
 	$.ajax({
 		method: "PUT",
-		url: "../controller/database/incProgress.php"
+		url: "database/incProgress.php"
 	})
 	.done(function() {
 		callback();
