@@ -16,39 +16,7 @@
     </div>
 </div>
 <button id="incProgress">Press me! :D</button>
-<button id="getProgress">Get progress</button>
-
-<script>
-	var progress = 0;
-
-    $("document").ready(function () {
-        getProgress(function (msg) {
-            progress = msg;
-        });
-    });
-
-    function getProgress (callback) {
-        $.ajax({
-            method: "GET",
-            url: "../controller/database/getProgress.php"
-        })
-        .done(function( msg ) {
-            callback(msg);
-        });
-    }
-
-
-
-	$("#incProgress").click(function () {
-		progress++;
-		colorBar();
-		console.log("beep boop: " + progress);
-	});
-
-	function colorBar(){
-		$(".progressbar .barSection:nth-child(" + progress + ")").css("background-color", "#38b12f");
-	}
-</script>
+<button id="checkProgress">Check progress</button>
 
 <style>
 	/*
