@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Progress</title>
-	</head>
-	<body>
-		<div class="progressbar">
-			<div class="barSection">
-				
-			</div>
-			<div class="barSection">
-				
-			</div>
-			<div class="barSection">
-				
-			</div>
-			<div class="barSection">
-				
-			</div>
-			<div class="barSection">
-				
-			</div>
-		</div>
-		<button>Press me! :D</button>
-	</body>
-</html>
+<div class="progressbar">
+    <div class="barSection">
+
+    </div>
+    <div class="barSection">
+
+    </div>
+    <div class="barSection">
+
+    </div>
+    <div class="barSection">
+
+    </div>
+    <div class="barSection">
+
+    </div>
+</div>
+
 <script>
 	var progress = 0;
 	
@@ -37,6 +29,7 @@
 		$(".progressbar .barSection:nth-child(" + progress + ")").css("background-color", "#38b12f");
 	}
 </script>
+
 <style>
 	/*
 		Green: #38b12f
@@ -62,5 +55,8 @@
 		border-right: 1px solid #5d5d5d;
 		
 		transition: background-color 1s;
+	}
+    .barSection:last-child{
+		border-right: 0;
 	}
 </style>
