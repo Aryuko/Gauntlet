@@ -16,7 +16,7 @@
     </div>
 </div>
 <button id="incProgress">Press me! :D</button>
-<button id="getProgress"></button>
+<button id="getProgress">Get progress</button>
 
 <script>
 	var progress = 0;
@@ -30,11 +30,11 @@
             return msg;
         });
     }
+
     $("#getProgress").click(function () {
         alert(getProgress());
     });
 
-    })
 	$("#incProgress").click(function () {
 		progress++;
 		colorBar();
