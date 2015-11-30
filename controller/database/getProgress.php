@@ -2,7 +2,6 @@
 
     include_once "dbConnect.php";
 
-
 	$stmt = $dbh->prepare("SELECT `progress` FROM `gProgress` WHERE `id` = 1");
 
 	if(!$stmt->execute()){
@@ -18,20 +17,4 @@
     }
 
 	echo $row[0];
-
-    /*
-    $stmt = "SELECT `progress` FROM `gProgress` WHERE `id` = 1";
-    if(!$res = $dbh->query($stmt)){
-        die('Could not get result');
-    }
-
-    if(!$rows = $res->num_rows){
-        die('Could not get number of rows');
-    }
-
-    echo $rows;
-    */
-
-    //echo json_encode($row);
-
 ?>

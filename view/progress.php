@@ -21,6 +21,12 @@
 <script>
 	var progress = 0;
 
+    $("document").ready(function () {
+        getProgress(function (msg) {
+            progress = msg;
+        });
+    });
+
     function getProgress (callback) {
         $.ajax({
             method: "GET",
@@ -31,11 +37,7 @@
         });
     }
 
-    $("#getProgress").click(function () {
-        getProgress(function (msg) {
-            alert(msg);
-        });
-    });
+
 
 	$("#incProgress").click(function () {
 		progress++;
