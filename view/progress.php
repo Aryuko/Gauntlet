@@ -21,18 +21,20 @@
 <script>
 	var progress = 0;
 
-    function getProgress () {
+    function getProgress (callback) {
         $.ajax({
             method: "GET",
             url: "../controller/database/getProgress.php"
         })
         .done(function( msg ) {
-            return msg;
+            callback(msg);
         });
     }
 
     $("#getProgress").click(function () {
-        alert(getProgress());
+        getProgress(function (msg) {
+            alert(msg);
+        });
     });
 
 	$("#incProgress").click(function () {
