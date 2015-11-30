@@ -16,7 +16,7 @@
        die('Could not fetch array' . mysql_error())
     }
 
-	echo $row['progress'];
+	echo $row[0];
     //echo json_encode($row);
 
 ?>
