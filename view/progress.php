@@ -15,11 +15,27 @@
 
     </div>
 </div>
+<button id="incProgress">Press me! :D</button>
+<button id="getProgress"></button>
 
 <script>
 	var progress = 0;
-	
-	$("button").click(function () {
+
+    function getProgress () {
+        $.ajax({
+            method: "POST",
+            url: "../controller/database/getProgress.php"
+        })
+        .done(function( msg ) {
+            return msg;
+        });
+    }
+    $("#getProgress").click(function () {
+        alert(getProgress());
+    });
+
+    })
+	$("#incProgress").click(function () {
 		progress++;
 		colorBar();
 		console.log("beep boop: " + progress);
