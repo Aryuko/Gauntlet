@@ -4,14 +4,19 @@
 
 	$stmt = $dbh->prepare("SELECT `progress` FROM `gProgress` WHERE `id` = 0");
 
-	$stmt->execute();
+	if(!$stmt->execute()){
+       die('Could not execute statement' . mysql_error())
+    }
 
-	$res = $stmt->get_result();
+	if($res = $stmt->get_result()){
+       die('Could not get result' . mysql_error())
+    }
 
-	$row = $res->fetch_array();
+	if($row = $res->fetch_array()){
+       die('Could not fetch array' . mysql_error())
+    }
 
 	echo $row['progress'];
     //echo json_encode($row);
-
 
 ?>
