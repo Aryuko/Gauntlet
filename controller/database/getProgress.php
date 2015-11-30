@@ -15,7 +15,7 @@
     */
 
     if(!$res = $dbh->query($stmt)){
-        die('Could not get result')
+        die('Could not get result');
     }
 
 	if(!$row = $res->fetch_row()){
