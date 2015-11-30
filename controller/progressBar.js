@@ -5,7 +5,7 @@ $("document").ready(function () {
 		progress = msg;
 	});
 	initColorBar();
-	alert('document.ready');
+	alert('document.ready, progress = ' + progress);
 });
 
 function getProgress (callback) {
