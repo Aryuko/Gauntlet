@@ -12,7 +12,7 @@
        die('Could not get result');
     }
 
-	if(!$row = $res->fetch_array()){
+	if(!$row = $res->fetch_row()){
        die('Could not fetch array');
     }
 
