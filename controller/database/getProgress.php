@@ -19,11 +19,18 @@
         die('Could not get result');
     }
 
+    if(!$rows = $res->num_rows){
+        die('Could not get number of rows');
+    }
+
+    echo $rows;
+    /*
 	if(!$row = $res->fetch_row()){
        die('Could not fetch row');
     }
 
 	echo $row[0];
+    */
     //echo json_encode($row);
 
 ?>
