@@ -16,7 +16,8 @@
     </div>
 </div>
 <button id="incProgress">Increase progress</button>
-<button id="checkProgress">Check progress</button>
+<button id="getProgress">Get progress</button>
+<button id="checkProgress">Check local progress</button>
 
 <style>
 	/*

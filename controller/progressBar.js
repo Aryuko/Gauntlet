@@ -11,12 +11,19 @@ $("document").ready(function () {
 
     $("#incProgress").click(function () {
         incProgress(function () {
+            progress ++;
             alert("Progress increased to: " + progress);
         });
     });
 
+    $("#getProgress").click(function () {
+        getProgress(function () {
+            alert("Progress: " + progress);
+        });
+    });
+
     $("#checkProgress").click(function () {
-        alert('Progress: ' + progress);
+        alert('Local progress variable: ' + progress);
     });
 
 });
