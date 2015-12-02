@@ -1,5 +1,5 @@
 var progress = null;
-var maxProgress = null;
+var maxProgress = 5;
 var barsColored = 0;
 
 var green = "#1FBE00";
@@ -32,10 +32,6 @@ $("document").ready(function () {
     });
 
 	window.setTimeout(updateBar, 50);
-    window.setTimeout(function(){
-        maxProgress = $(".progressBar").children().length;
-        alert(maxProgress);
-    }, 50);
 });
 
 function getProgress (callback) {
