@@ -14,7 +14,8 @@ $("document").ready(function () {
     });
 
     $("#getProgress").click(function () {
-        getProgress(function () {
+        getProgress(function (msg) {
+            progress = msg;
             alert("Progress: " + progress);
         });
     });
