@@ -1,6 +1,6 @@
 var progress = null;
+var maxProgress = null;
 var barsColored = 0;
-var maxProgress = $(".progressBar").children().length;
 
 var green = "#1FBE00";
 var grey = "#c6c6c6";
@@ -33,6 +33,7 @@ $("document").ready(function () {
 
 	window.setTimeout(updateBar, 50);
     window.setTimeout(function(){
+        maxProgress = $(".progressBar").children().length;
         alert(maxProgress);
     }, 50);
 });
