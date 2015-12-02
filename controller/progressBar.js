@@ -10,9 +10,8 @@ $("document").ready(function () {
 
 
     $("#incProgress").click(function () {
-        alert('Progress increased');
         incProgress(function () {
-            alert("Updated progress: " + progress);
+            alert("Progress increased to: " + progress);
         });
     });
 
@@ -27,7 +26,7 @@ function getProgress (callback) {
 		method: "GET",
 		url: "controller/database/getProgress.php"
 	})
-	.done(function( msg ) {
+	.done(function(msg) {
 		callback(msg);
 	});
 }
