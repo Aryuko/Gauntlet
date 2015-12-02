@@ -29,6 +29,10 @@ $("document").ready(function () {
         });
     });
 
+    $("#updateBars").click(function () {
+        updateBar();
+    });
+
 	window.setTimeout(updateBar, 2000);
 });
 
@@ -46,7 +50,7 @@ function setProgress (data, callback) {
 	$.ajax({
 		method: "POST",
 		url: "controller/database/setProgress.php",
-        data: {int: data}
+        data: {value: data}
 	})
 	.done(function() {
 		callback();
