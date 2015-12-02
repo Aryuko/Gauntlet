@@ -26,12 +26,29 @@ $("document").ready(function () {
         alert('Local progress variable: ' + progress);
     });
 
+    $("#setProgress").click(function () {
+        setProgress(function () {
+            progress = 0;
+        });
+    });
+
 });
 
 function getProgress (callback) {
 	$.ajax({
 		method: "GET",
 		url: "controller/database/getProgress.php"
+	})
+	.done(function(msg) {
+		callback(msg);
+	});
+}
+
+function setProgress (data, callback) {
+	$.ajax({
+		method: "POST",
+		url: "controller/database/setProgress.php",
+        data: {int: data}
 	})
 	.done(function(msg) {
 		callback(msg);
