@@ -18,6 +18,7 @@
 <button id="incProgress">Increase progress</button>
 <button id="getProgress">Get progress</button>
 <button id="checkProgress">Check local progress</button>
+<button id="setProgress">Set progress to 0</button>
 
 <style>
 	/*
