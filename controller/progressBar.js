@@ -16,6 +16,13 @@ $("document").ready(function () {
         });
     });
 
+    $("#decProgress").click(function () {
+        decProgress(function () {
+            progress --;
+            updateBar();
+        });
+    });
+
     $("#getProgress").click(function () {
         getProgress(function (msg) {
             progress = msg;
@@ -71,17 +78,16 @@ function incProgress (callback) {
 		callback();
 	});
 }
-/*
+
 function decProgress (callback) {
 	$.ajax({
 		method: "PUT",
-		url: "../controller/database/incProgress.php"
+		url: "controller/database/decProgress.php"
 	})
 	.done(function() {
 		callback();
 	});
 }
-*/
 
 function updateBar(){
     if (barsColored < progress){

@@ -17,6 +17,7 @@
 </div>
 <ul class="menu">
     <li id="incProgress">Increase progress</li>
+    <li id="decProgress">Decrease progress</li>
     <li id="getProgress">Get progress</li>
     <li id="checkProgress">Check local progress</li>
     <li id="setProgress">Set progress to 0</li>
