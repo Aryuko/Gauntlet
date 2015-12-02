@@ -15,14 +15,17 @@
 
     </div>
 </div>
-<button id="incProgress">Increase progress</button>
-<button id="getProgress">Get progress</button>
-<button id="checkProgress">Check local progress</button>
-<button id="setProgress">Set progress to 0</button>
+<ul class="menu">
+    <li id="incProgress">Increase progress</li>
+    <li id="getProgress">Get progress</li>
+    <li id="checkProgress">Check local progress</li>
+    <li id="setProgress">Set progress to 0</li>
+</ul>
 
 <style>
 	/*
-		Green: #38b12f
+		Green:      #38b12f
+        Dark grey:  #5d5d5d
 	
 	*/
 	.progressbar{
@@ -49,4 +52,19 @@
     .barSection:last-child{
 		border-right: 0;
 	}
+    .menu{
+        list-style-type: none;
+        display: inline-block;
+		padding: 0.25em 0em;
+    }
+    .menu li{
+        display: inline;
+		padding: 0.25em 1em;
+		margin-right:-4px;
+		cursor:pointer;
+        background-color: #5d5d5d;
+    }
+    .menu li: hover{
+        border-bottom: 2px solid #ffa604;
+    }
 </style>
