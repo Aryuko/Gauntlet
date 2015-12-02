@@ -12,7 +12,7 @@ $("document").ready(function () {
     $("#incProgress").click(function () {
         incProgress(function () {
             progress ++;
-            alert("Progress increased to: " + progress);
+            updateBar();
         });
     });
 
@@ -30,6 +30,7 @@ $("document").ready(function () {
     $("#setProgress").click(function () {
         setProgress(0, function () {
             progress = 0;
+            updateBar();
         });
     });
 
