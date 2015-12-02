@@ -45,7 +45,7 @@ $("document").ready(function () {
         updateBar();
     });
 
-	window.setTimeout(updateBar, 500);
+	window.setTimeout(updateBar, 50);
 });
 
 function getProgress (callback) {
