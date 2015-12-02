@@ -63,7 +63,7 @@
 		cursor:pointer;
         border-bottom: 2px solid red;
     }
-    .menu li: hover{
+    .menu li:hover{
         color: red;
         border-bottom: 2px solid #ffa604 !important;
     }
