@@ -1,13 +1,10 @@
 var progress = null;
+var barsColored = 0;
 
 $("document").ready(function () {
 	getProgress(function (msg) {
 		progress = msg;
 	});
-	initColorBar();
-
-	alert('document.ready, progress = ' + progress);
-
 
     $("#incProgress").click(function () {
         incProgress(function () {
@@ -32,6 +29,7 @@ $("document").ready(function () {
         });
     });
 
+	window.setTimeout(updateBar, 2000);
 });
 
 function getProgress (callback) {
@@ -75,13 +73,22 @@ function decProgress (callback) {
 	});
 }
 */
-function initColorBar(){
-	for(var i = 1; i <= progress; i++){
-		colorBar(i);
-	}
+
+function updateBar(){
+    if (barsColored < progress){
+        for(var i = barsColored + 1; i <= progress; i++){
+            colorBar(i, "#38b12f");
+        }
+    }
+    else if (barsColored > progress){
+        for(var i = barsColored; i > progress; i--){
+            colorBar(i, "#c6c6c6");
+        }
+    }
+    barsColored = progress;
 }
 
-function colorBar(index) {
-	$(".progressbar .barSection:nth-child(" + index + ")").css("background-color", "#38b12f");
+function colorBar(index, color) {
+	$(".progressbar .barSection:nth-child(" + index + ")").css("background-color", color);
 }
 

@@ -25,6 +25,7 @@
 <style>
 	/*
 		Green:      #38b12f
+        Light grey: #c6c6c6
         Dark grey:  #5d5d5d
 	
 	*/
