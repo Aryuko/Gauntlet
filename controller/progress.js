@@ -31,6 +31,9 @@ $("document").ready(function () {
     });
 
 	window.setTimeout(updateBar, 50);
+    window.setTimeout(function(){
+        alert($(".progressBar > li").length);
+    }, 50);
 });
 
 function getProgress (callback) {
@@ -55,23 +58,28 @@ function setProgress (data, callback) {
 }
 
 function incProgress (callback) {
-	$.ajax({
-		method: "PUT",
-		url: "controller/database/incProgress.php"
-	})
-	.done(function() {
-		callback();
-	});
+    if(progress < $(".progressBar > li").length){
+        $.ajax({
+            method: "PUT",
+            url: "controller/database/incProgress.php"
+        })
+        .done(function() {
+            callback();
+        });
+
+}
 }
 
 function decProgress (callback) {
-	$.ajax({
-		method: "PUT",
-		url: "controller/database/decProgress.php"
-	})
-	.done(function() {
-		callback();
-	});
+    if(progress > 0){
+        $.ajax({
+            method: "PUT",
+            url: "controller/database/decProgress.php"
+        })
+        .done(function() {
+            callback();
+        });
+    }
 }
 
 function updateBar(){
