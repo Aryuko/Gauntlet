@@ -6,6 +6,19 @@ $("document").ready(function () {
 	});
 	initColorBar();
 	alert('document.ready, progress = ' + progress);
+
+
+    $("#incProgress").click(function () {
+        alert('Progress increased');
+        incProgress(function () {
+            alert("Updated progress: " + progress);
+        });
+    });
+
+    $("#checkProgress").click(function () {
+        alert('Progress: ' + progress);
+    });
+
 });
 
 function getProgress (callback) {
@@ -48,13 +61,3 @@ function colorBar(index) {
 	$(".progressbar .barSection:nth-child(" + index + ")").css("background-color", "#38b12f");
 }
 
-$("#incProgress").click(function () {
-	alert('Progress increased');
-	incProgress(function () {
-		alert("Updated progress: " + progress);
-	});
-});
-
-$("#checkProgress").click(function () {
-	alert('Progress: ' + progress);
-});
