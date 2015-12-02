@@ -25,7 +25,7 @@
 
 <style>
 	/*
-		Green:      #38b12f
+		Green:      #1FBE00
         Light grey: #c6c6c6
         Dark grey:  #5d5d5d
 	
@@ -63,7 +63,7 @@
     .menu li{
 		padding: 0.25em 0.25em;
 		cursor:pointer;
-        border-bottom: 2px solid red;
+        border-bottom: 2px solid #1FBE00;
 
         -moz-user-select: none;
         -webkit-user-select: none;
@@ -72,6 +72,6 @@
         user-select: none;
     }
     .menu li:hover{
-        border-bottom: 2px solid #ffa604 !important;
+        border-bottom: 2px solid #30ff07 !important;
     }
 </style>

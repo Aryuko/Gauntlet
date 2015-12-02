@@ -1,6 +1,9 @@
 var progress = null;
 var barsColored = 0;
 
+var green = "#1FBE00";
+var grey = "#c6c6c6";
+
 $("document").ready(function () {
 	getProgress(function (msg) {
 		progress = msg;
@@ -34,7 +37,7 @@ $("document").ready(function () {
         updateBar();
     });
 
-	window.setTimeout(updateBar, 2000);
+	window.setTimeout(updateBar, 500);
 });
 
 function getProgress (callback) {
@@ -82,12 +85,12 @@ function decProgress (callback) {
 function updateBar(){
     if (barsColored < progress){
         for(var i = barsColored + 1; i <= progress; i++){
-            colorBar(i, "#38b12f");
+            colorBar(i, green);
         }
     }
     else if (barsColored > progress){
         for(var i = barsColored; i > progress; i--){
-            colorBar(i, "#c6c6c6");
+            colorBar(i, grey);
         }
     }
     barsColored = progress;
