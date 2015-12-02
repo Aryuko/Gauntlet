@@ -1,10 +1,11 @@
-var progress = 0;
+var progress = null;
 
 $("document").ready(function () {
 	getProgress(function (msg) {
 		progress = msg;
 	});
 	initColorBar();
+
 	alert('document.ready, progress = ' + progress);
 
 
@@ -24,7 +25,7 @@ $("document").ready(function () {
 function getProgress (callback) {
 	$.ajax({
 		method: "GET",
-		url: "database/getProgress.php"
+		url: "controller/database/getProgress.php"
 	})
 	.done(function( msg ) {
 		callback(msg);
@@ -34,7 +35,7 @@ function getProgress (callback) {
 function incProgress (callback) {
 	$.ajax({
 		method: "PUT",
-		url: "database/incProgress.php"
+		url: "controller/database/incProgress.php"
 	})
 	.done(function() {
 		callback();
