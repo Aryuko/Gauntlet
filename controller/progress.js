@@ -23,26 +23,11 @@ $("document").ready(function () {
         });
     });
 
-    $("#getProgress").click(function () {
-        getProgress(function (msg) {
-            progress = msg;
-            alert("Progress: " + progress);
-        });
-    });
-
-    $("#checkProgress").click(function () {
-        alert('Local progress variable: ' + progress);
-    });
-
     $("#setProgress").click(function () {
         setProgress(0, function () {
             progress = 0;
             updateBar();
         });
-    });
-
-    $("#updateBars").click(function () {
-        updateBar();
     });
 
 	window.setTimeout(updateBar, 50);
