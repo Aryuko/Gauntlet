@@ -32,7 +32,7 @@ $("document").ready(function () {
 
 	window.setTimeout(updateBar, 50);
     window.setTimeout(function(){
-        alert($(".progressBar > li").length);
+        alert($(".progressBar > .barSection").length);
     }, 50);
 });
 
@@ -58,7 +58,7 @@ function setProgress (data, callback) {
 }
 
 function incProgress (callback) {
-    if(progress < $(".progressBar > li").length){
+    if(progress < $(".progressBar > .barSection").length){
         $.ajax({
             method: "PUT",
             url: "controller/database/incProgress.php"
