@@ -59,13 +59,12 @@
 		padding: 0.25em 0em;
     }
     .menu li{
-        display: inline;
 		padding: 0.25em 1em;
-		margin-right:-4px;
 		cursor:pointer;
         border-bottom: 2px solid red;
     }
     .menu li: hover{
+        color: red;
         border-bottom: 2px solid #ffa604 !important;
     }
 </style>
