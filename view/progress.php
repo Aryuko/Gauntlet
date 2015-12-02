@@ -59,12 +59,17 @@
 		padding: 0.25em 0em;
     }
     .menu li{
-		padding: 0.25em 1em;
+		padding: 0.25em 0.25em;
 		cursor:pointer;
         border-bottom: 2px solid red;
+
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
     .menu li:hover{
-        color: red;
         border-bottom: 2px solid #ffa604 !important;
     }
 </style>
