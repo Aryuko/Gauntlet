@@ -50,8 +50,8 @@ function setProgress (data, callback) {
 		url: "controller/database/setProgress.php",
         data: {int: data}
 	})
-	.done(function(msg) {
-		callback(msg);
+	.done(function() {
+		callback();
 	});
 }
 
