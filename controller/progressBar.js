@@ -27,7 +27,7 @@ $("document").ready(function () {
     });
 
     $("#setProgress").click(function () {
-        setProgress(function () {
+        setProgress(0, function () {
             progress = 0;
         });
     });

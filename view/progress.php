@@ -53,6 +53,7 @@
 		border-right: 0;
 	}
     .menu{
+        margin: auto;
         list-style-type: none;
         display: inline-block;
 		padding: 0.25em 0em;
@@ -62,9 +63,9 @@
 		padding: 0.25em 1em;
 		margin-right:-4px;
 		cursor:pointer;
-        background-color: #5d5d5d;
+        border-bottom: 2px solid red;
     }
     .menu li: hover{
-        border-bottom: 2px solid #ffa604;
+        border-bottom: 2px solid #ffa604 !important;
     }
 </style>
